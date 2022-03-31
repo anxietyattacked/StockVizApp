@@ -3,21 +3,14 @@ import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
-import { Router, useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function SearchBar() {
   const [search, setSearch] = useState("");
-  // let [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
 
-  //  const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   navigate.
-  // };
   function handleSubmit(e) {
     e.preventDefault();
-    // let params = e.target;
-    // setSearchParams(params);
     navigate(`/search/${search.toLocaleUpperCase()}`, { replace: true });
   }
 
@@ -30,14 +23,15 @@ export default function SearchBar() {
         alignItems: "center",
         width: "80vw",
         marginBottom: "6rem",
+        gridColumn: "span 3",
       }}
       onSubmit={handleSubmit}
     >
       <InputBase
         name="search"
         sx={{ ml: 1, flex: 1 }}
-        placeholder="Search Stocks"
-        inputProps={{ "aria-label": "search stocks" }}
+        placeholder="Search Stock Symbol"
+        inputProps={{ "aria-label": "search stock symbol" }}
         onChange={(e) => setSearch(e.target.value)}
       />
       <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">

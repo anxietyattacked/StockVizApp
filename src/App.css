@@ -4,3 +4,35 @@
   height: 85vh;
   padding: 1rem 1rem;
 }
+.grid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+.postive {
+  color: darkgreen;
+}
+.negative {
+  color: darkred;
+}
+.stockGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80vw;
+  gap: 0.25rem;
+}
+@media only screen and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
