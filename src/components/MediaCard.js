@@ -16,7 +16,9 @@ export default function MediaCard({
 }) {
   return (
     <Card key={id}>
-      <CardMedia component="img" height="140" image={image} alt={headline} />
+      <a href={url}>
+        <CardMedia component="img" height="140" image={image} alt={headline} />
+      </a>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {headline}
@@ -26,10 +28,11 @@ export default function MediaCard({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">
-          <a href={url}>Link</a>
+        <Button variant="contained" size="medium" sx={{ width: "100%" }}>
+          <a style={{ textDecoration: "none", color: "white" }} href={url}>
+            Link
+          </a>
         </Button>
-        <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
   );

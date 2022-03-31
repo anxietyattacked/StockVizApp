@@ -53,7 +53,7 @@ const StockViz = () => {
       y: y,
       type: "scatter",
       mode: "lines",
-      name: `${search} adjusted close`,
+      name: `${search} Adjusted Close`,
       line: { color: "#387EE0" },
     };
     const data2 = {
@@ -100,12 +100,13 @@ const StockViz = () => {
     Plotly.newPlot(viz.current, allData, layout, config);
   }, [Plotly, x, y, high, low, search]);
   return (
-    <>
-      <div>{search} dwedawd dadwad</div>
+    <div className="vizMain">
+      <h1>{search}</h1>
       <div ref={viz}></div>
       <Divider light sx={{ marginTop: "6rem" }} />
+      <h1>Recent {search} News</h1>
       <News search={search} />
-    </>
+    </div>
   );
 };
 

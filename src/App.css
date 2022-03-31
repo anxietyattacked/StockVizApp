@@ -4,6 +4,9 @@
   height: 85vh;
   padding: 1rem 1rem;
 }
+.vizMain {
+  margin: 1rem 1rem;
+}
 .grid {
   display: grid;
   gap: 0.5rem;
