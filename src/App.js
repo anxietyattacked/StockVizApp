@@ -53,10 +53,6 @@ function App() {
     fetchData();
   }, [finhubKey]);
 
-  useEffect(() => {
-    console.log(aapl);
-  }, [aapl]);
-
   return (
     <div className="App">
       <div className="Main">

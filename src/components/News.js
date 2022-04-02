@@ -26,9 +26,6 @@ const News = ({ search }) => {
     };
     fetchData();
   }, [search, finhubKey, prevDate, curDate]);
-  useEffect(() => {
-    console.log(news);
-  }, [news]);
   return (
     <div className="grid">
       {typeof news !== "undefined" ? (
@@ -36,6 +33,7 @@ const News = ({ search }) => {
           .slice(0, 6)
           .map((news) => (
             <MediaCard
+              key={news.id}
               id={news.id}
               headline={news.headline}
               source={news.source}

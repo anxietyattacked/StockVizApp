@@ -21,10 +21,8 @@ export default function QuoteCard({
   return (
     <Card elevation={1}>
       <CardContent sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Typography variant="h6">{symbol}</Typography>
-        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-          {price}
-        </Typography>
+        <Typography>{symbol}</Typography>
+        <Typography sx={{ fontWeight: "bold" }}>{price}</Typography>
       </CardContent>
       <CardContent sx={{ display: "flex" }}>
         <Typography
@@ -43,7 +41,7 @@ export default function QuoteCard({
       </CardContent>
       <CardActions>
         <Link to={`/search/${symbol}`} style={{ textDecoration: "none" }}>
-          <Button size="small">See Stock</Button>
+          <Button size="medium">See Stock</Button>
         </Link>
       </CardActions>
     </Card>

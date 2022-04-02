@@ -43,7 +43,6 @@ const StockViz = () => {
       );
       setLow(Object.keys(dataArray).map((y) => dataArray[`${y}`]["3. low"]));
       setHigh(Object.keys(dataArray).map((y) => dataArray[`${y}`]["2. high"]));
-      console.log(data);
     }
   }, [data]);
 
