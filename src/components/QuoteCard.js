@@ -36,7 +36,7 @@ export default function QuoteCard({
           ) : (
             <ExpandMoreIcon className="negative" />
           )}
-          {percentChange}
+          {percentChange}%
         </Typography>
       </CardContent>
       <CardActions>
